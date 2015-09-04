@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Species:</strong>
+  <%= @animal.species %>
+</p>
+
+<p>
+  <strong>Phylum:</strong>
+  <%= @animal.phylum %>
+</p>
+
+<p>
+  <strong>Is vertebrate:</strong>
+  <%= @animal.is_vertebrate %>
+</p>
+
+<p>
+  <strong>No of legs:</strong>
+  <%= @animal.no_of_legs %>
+</p>
+
+<%= link_to 'Edit', edit_animal_path(@animal) %> |
+<%= link_to 'Back', animals_path %>

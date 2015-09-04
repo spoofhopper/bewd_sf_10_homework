@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  species: MyString
+  phylum: MyString
+  is_vertebrate: false
+  no_of_legs: 1
+
+two:
+  species: MyString
+  phylum: MyString
+  is_vertebrate: false
+  no_of_legs: 1
