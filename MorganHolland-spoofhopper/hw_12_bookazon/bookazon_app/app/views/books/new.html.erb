@@ -1,0 +1,24 @@
+
+<%= @book.inspect %>
+
+<div class="col-xs-12">
+
+<h1 style="color:#cc3333">New Book</h1>
+
+<div class="well">
+
+<%= simple_form_for @book do |f| %>
+  <%= f.input :title, label:false, input_html: {placeholder: "Title"} %>
+  <%= f.input :author %>
+  <%= f.input :genre %>
+  <%= f.input :image_url %>
+  <%= f.input :year_published %>
+  <%= f.input :available, as: :boolean %>
+  <%= f.submit "Submit".html_safe, class: 'btn btn-lg btn-danger' %>
+
+
+<% end %>
+
+</div>
+
+</div>

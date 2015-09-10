@@ -1,0 +1,43 @@
+<style>
+  body {
+    text-align: center;
+    color: black;
+    font-family: helvetica;
+  }
+  p {
+    font-size: 22px;
+  }
+  input {
+    border: 0;
+    padding: 10px;
+    font-size: 18px;
+  }
+  input[type="submit"] {
+    background: red;
+    color: white;
+  }
+</style>
+
+
+<div class="cod-xs-12">
+
+
+<h1><%= @book.title %></h1>
+
+<h3><%= @book.author %></h3>
+<h3><%= @book.year_published %></h3>
+
+<p>
+<%= image_tag(@book.image_url, class: 'img-thumbnail img-responsive') %>
+</p>
+
+</div>
+
+<div class="row-fluid">
+
+
+
+  <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-lg btn-default'  %>
+  <%= link_to "Index", books_path, class: 'btn btn-lg btn-default' %>
+
+</div>

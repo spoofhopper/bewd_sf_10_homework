@@ -1,0 +1,18 @@
+<div class="col-12">
+  <h1 style="color:#cc3333;">Our Book Collection</h1>
+
+  <div class="well">
+    <% @books.each do |book| %>
+    <ul>
+      <li> <b><%= book.title %></b>, by <%= book.author %> |
+         <%= link_to 'Show', book_path(book) %> |
+         <%= link_to 'Edit', edit_book_path(book) %>
+      </li>
+    </ul>
+    <% end %>
+  </div>
+</div>
+
+<div class="well">
+  <%= link_to "Add New Book", new_book_path, class: 'btn btn-default' %>
+</div>
