@@ -38,6 +38,9 @@
 
 
   <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-lg btn-default'  %>
+  <%= link_to 'Delete', book_path(@book), class: 'btn btn-lg btn-default',
+       method: :delete,
+       data: { confirm: 'Are you sure?' } %>
   <%= link_to "Index", books_path, class: 'btn btn-lg btn-default' %>
 
 </div>
