@@ -1,0 +1,48 @@
+<style>
+  body {
+    text-align: center;
+    color: black;
+    font-family: helvetica;
+  }
+  p {
+    font-size: 22px;
+  }
+  input {
+    border: 0;
+    padding: 10px;
+    font-size: 18px;
+  }
+  input[type="submit"] {
+    background: red;
+    color: white;
+  }
+</style>
+
+<div class="cod-xs-12">
+
+<p>
+  <strong>Name:</strong>
+  <%= @artist.name %>
+</p>
+
+<p>
+<%= image_tag(@artist.image_url, class: 'img-thumbnail img-responsive') %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @artist.description %>
+</p>
+
+</div>
+
+<div class="row-fluid">
+
+
+  <%= link_to 'Edit', edit_artist_path(@artist), class: 'btn btn-lg btn-default' %>
+  <%= link_to 'Delete', artist_path(@artist), class: 'btn btn-lg btn-default',
+     method: :delete,
+     data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Index', artists_path, class: 'btn btn-lg btn-default' %>
+
+</div>

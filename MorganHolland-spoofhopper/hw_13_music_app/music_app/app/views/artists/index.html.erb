@@ -1,0 +1,21 @@
+<div class="col-12">
+  <h1 style="color:#cc3333;">All Artists</h1>
+
+  <div class="well">
+    <% @artists.each do |artist| %>
+    <ul>
+      <li> <b><%= artist.name %></b> |
+         <%= link_to 'Show', artist_path(artist) %> |
+         <%= link_to 'Edit', edit_artist_path(artist) %> |
+         <%= link_to 'Delete', artist_path(artist),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+      </li>
+    </ul>
+    <% end %>
+  </div>
+</div>
+
+<div class="well">
+  <%= link_to "Add New Artist", new_artist_path, class: 'btn btn-default' %>
+</div>
