@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+
+</div>
+
+
+<div class="panel-body">
+<%= simple_form_for @song do |f| %>
+
+  <% if @song.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@artist.errors.count, "error") %> prohibited
+        this song from being saved:
+      </h2>
+      <ul>
+        <% @song.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :title, label: false, input_html: {placeholder: "Title"}%>
+  <%= f.input :artist, label: false, input_html: {placeholder: "Artist"} %>
+  <%= f.input :length, label: false, input_html: {placeholder: "Length [3:00]"} %>
+  <%= f.input :genre, label: false, input_html: {placeholder: "Genre"} %>
+  <%= f.input :year, label: false, input_html: {placeholder: "Year [2004]"} %>
+  <%= f.input :lyrics, label: false, as: :text, input_html: {placeholder: "Lyrics"} %>
+  <%= f.submit "Submit".html_safe, class: 'btn btn-lg btn-danger'%>
+
+
+<% end %>
+</div>
+</div>
