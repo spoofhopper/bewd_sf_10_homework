@@ -1,0 +1,13 @@
+<%= simple_form_for([@song, @song.reviews.build]) do |f| %>
+  <p>
+    <%= f.label :reviewer %><br>
+    <%= f.text_field :reviewer %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
